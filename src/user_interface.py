@@ -29,7 +29,7 @@ model_options = {
 
 # Başlangıç modeli
 selected_model_name = list(model_options.values())[1]
-model_path = "src/model/best_deit_model.pt"
+model_path = "src/model/swin/swin_model.pt"
 
 # Görsel işleme
 transform = transforms.Compose([
