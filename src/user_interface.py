@@ -75,14 +75,19 @@ def run_model():
         with torch.no_grad():
             outputs = model(input_tensor).logits
             probabilities = torch.softmax(outputs, dim=1)
-            predicted_class = torch.argmax(probabilities, dim=1).item()
-            confidence = probabilities[0][predicted_class].item() * 100
+            top3 = torch.topk(probabilities, 3)
 
-        animal_result = str(class_names[predicted_class]).capitalize()
-        prediction_label.config(
-            text=f"Tahmin: {animal_result}\nDoğruluk: %{confidence:.2f}",
-            font=("Montserrat", 16)
-        )
+            top_indices = top3.indices[0].tolist()
+            top_scores = top3.values[0].tolist()
+
+        result_lines = []
+        for i in range(3):
+            class_name = class_names[top_indices[i]].capitalize()
+            confidence = top_scores[i] * 100
+            result_lines.append(f"{i+1}. {class_name}: %{confidence:.2f}")
+
+        result_text = "Tahminler:\n" + "\n".join(result_lines)
+        prediction_label.config(text=result_text, font=("Montserrat", 16))
     else:
         prediction_label.config(
             text="Lütfen önce bir görsel yükleyin.",
@@ -164,7 +169,7 @@ uploaded_label.place_forget()
 
 # Tahmin kutusu
 prediction_label = Label(window, text="", fg="white", bg=bek, justify="left")
-prediction_label.place(x=20, y=340)
+prediction_label.place(x=20, y=200)
 
 # Butonlar
 window.option_add("*Label*Background", bek)
