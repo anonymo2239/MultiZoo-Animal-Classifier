@@ -21,7 +21,7 @@
 
 ---
 
-## 🧠 Supported Models
+## Supported Models
 
 | Model           | Source                                      | Architecture Type             | Parameters |
 | --------------- | ------------------------------------------- | ----------------------------- | ---------- |
@@ -32,7 +32,7 @@ You can switch between models directly in the GUI.
 
 ---
 
-## 🐾 Features
+## Features
 
 * Top-3 prediction with confidence scores
 * Detailed model metrics (accuracy, precision, recall, F1)
@@ -42,7 +42,7 @@ You can switch between models directly in the GUI.
 
 ---
 
-## 🎯 Dataset
+## Dataset
 
 The custom dataset includes 90+ animal classes:
 
