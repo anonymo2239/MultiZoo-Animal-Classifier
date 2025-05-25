@@ -55,15 +55,6 @@ The custom dataset includes 90+ animal classes:
 
 ---
 
-Bu format hem sade hem de kullanıcıyı doğrudan yönlendirir. Alternatif olarak giriş kısmına da ufak bir not düşebilirim, örneğin:
-
-> You can access the dataset used in this project from the [Google Drive link here](https://drive.google.com/drive/folders/1uXMJa2CX5eg_kGWghbqg8TWkpeQi-0VI?usp=sharing).
-
-İster girişte, ister Dataset başlığı altında kullanabilirsin. Nerede görünmesini istersin?
-
-
----
-
 ## Performance (Sample - DeiT)
 
 ```
