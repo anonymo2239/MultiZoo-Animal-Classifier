@@ -1,6 +1,6 @@
 # MultiZoo Animal Classifier
 
-**MultiZoo** is a deep learning-based animal classifier that enables users to upload animal images and receive top-3 classification predictions via a simple **Tkinter GUI**. The application supports two transformer-based vision models: **DeiT** and **SwinV2**, fine-tuned on a custom animal dataset of 90+ classes.
+**MultiZoo** is a deep learning-based animal classifier that enables users to upload animal images and receive top-3 classification predictions via a simple **Tkinter GUI**. The application supports two transformer-based vision models: **DeiT** and **SwinV2**, fine-tuned on a custom animal dataset of 90+ classes. You can access dataset link in this readme file.
 
 ## Project Overview
 
@@ -49,6 +49,18 @@ The custom dataset includes 90+ animal classes:
 * `antelope`, `zebra`, `lion`, `horse`, `koala`, `bat`, `flamingo`, `fox`, `shark`, `whale`, etc.
 * Preprocessed and augmented using `TorchPreprocessor` with resizing, flips, and jittering
 * Structured via `ImageFolder` for PyTorch compatibility
+  
+📁 **You can access the dataset via this link:**
+👉 [Google Drive Dataset Folder](https://drive.google.com/drive/folders/1uXMJa2CX5eg_kGWghbqg8TWkpeQi-0VI?usp=sharing)
+
+---
+
+Bu format hem sade hem de kullanıcıyı doğrudan yönlendirir. Alternatif olarak giriş kısmına da ufak bir not düşebilirim, örneğin:
+
+> You can access the dataset used in this project from the [Google Drive link here](https://drive.google.com/drive/folders/1uXMJa2CX5eg_kGWghbqg8TWkpeQi-0VI?usp=sharing).
+
+İster girişte, ister Dataset başlığı altında kullanabilirsin. Nerede görünmesini istersin?
+
 
 ---
 
